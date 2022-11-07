@@ -6,8 +6,8 @@ const connection = require('./database');
 const User = connection.models.User;
 
 const customFields = {
-	usernameField: "uname",
-	passwordField: "pw"
+	usernameField: "username",
+	passwordField: "password"
 }
 
 //define verify callback function
@@ -16,6 +16,7 @@ const verifyCallback = (username, password, done) => {
 	User.findOne({username})
 		.then((user) => {
 			if(!user) {
+				console.log("NO USER")
 				return done(null, false)
 			}
 				

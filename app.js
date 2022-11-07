@@ -54,6 +54,12 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use((req, res, next) => {
+	console.log("SESSION",req.session)
+	console.log("User",req.user)
+	next()
+})
+
 
 /**
  * -------------- ROUTES ----------------
