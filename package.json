@@ -6,7 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon app.js",
-    "crypto": "nodemon concepts/cryptography/main.js"
+    "start": "node app.js",
+    "crypto": "nodemon concepts/cryptography/main.js",
+    "cryptography": "node concepts/cryptography/main.js",
+    "verify": "node concepts/cryptography/verifyIdentity.js"
   },
   "keywords": [],
   "author": "",

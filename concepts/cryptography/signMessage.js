@@ -5,8 +5,8 @@ const encrypt = require('./encrypt');
 const decrypt = require('./decrypt');
 
 const myData = {
-  firstName: 'Zach',
-  lastName: 'Gollwitzer',
+  firstName: 'Joseph',
+  lastName: 'Sam',
   socialSecurityNumber: 'NO NO NO.  Never put personal info in a digitally \
   signed message since this form of cryptography does not hide the data!'
 };
@@ -19,13 +19,14 @@ hash.update(myDataString);
 
 // Hashed data in Hexidecimal format
 const hashedData = hash.digest('hex');
+console.log("HASHING ONE", hashedData)
 
-const senderPrivateKey = fs.readFileSync(__dirname + '/id_rsa_priv.pem', 'utf8');
+const senderPrivateKey = fs.readFileSync(__dirname + '/private_key.pem', 'utf8');
 
 const signedMessage = encrypt.encryptWithPrivateKey(senderPrivateKey, hashedData);
 
 const packageOfDataToSend = {
-    algorithm: 'sha256',
+    algorithm: "sha256",
     originalData: myData,
     signedAndEncryptedData: signedMessage
 };
