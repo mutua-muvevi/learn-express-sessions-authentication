@@ -9,12 +9,14 @@
     "start": "node app.js",
     "crypto": "nodemon concepts/cryptography/main.js",
     "cryptography": "node concepts/cryptography/main.js",
-    "verify": "node concepts/cryptography/verifyIdentity.js"
+    "verify": "node concepts/cryptography/verifyIdentity.js",
+    "issueToken": "node concepts/jwt/issueJWT.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "base64url": "^3.0.1",
     "connect-mongo": "^3.1.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",

@@ -15,6 +15,7 @@ const publicKey = fs.readFileSync(__dirname + "/public_key.pem", "utf8");
 const decryptedMessage = decrypt.decryptWithPublicKey(publicKey, packageOfDataToSend.signedAndEncryptedData);
 
 // turn the decryptedMessage to a string value to be used in our function
+// decrypted with public key
 const decryptedMessageHex = decryptedMessage.toString()
 
 // look for our origininal ddata hashed value
