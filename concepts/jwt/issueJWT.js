@@ -56,7 +56,7 @@ verifyFunction.end()
 // crypto library accepts base64 encoding that is why we are transforming the signature back to base664
 const jwtSignatureBase64 = base64url.toBase64(signatureInBase64UrlFormat)
 
-// descrypt the signature with public key
+// obtain the public key
 const PUBLIC_KEY = fs.readFileSync(__dirname +"/public_key.pem", "utf8")
 
 // verifying the signature
