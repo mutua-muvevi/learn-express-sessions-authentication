@@ -25,6 +25,8 @@ const senderPrivateKey = fs.readFileSync(__dirname + '/private_key.pem', 'utf8')
 
 const signedMessage = encrypt.encryptWithPrivateKey(senderPrivateKey, hashedData);
 
+// This is not how we will send data ppackage because it might be too large which may slow down our application
+// JWT jsonwebtokens will help us here
 const packageOfDataToSend = {
     algorithm: "sha256",
     originalData: myData,
