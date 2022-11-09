@@ -5,7 +5,11 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon app.js"
+    "server": "nodemon app.js",
+    "start": "node app.js",
+    "crypto": "nodemon concepts/cryptography/main.js",
+    "cryptography": "node concepts/cryptography/main.js",
+    "verify": "node concepts/cryptography/verifyIdentity.js"
   },
   "keywords": [],
   "author": "",
